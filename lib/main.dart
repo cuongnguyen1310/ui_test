@@ -171,11 +171,7 @@ class _ContentsState extends State<Contents> {
   Widget build(BuildContext context) {
     return ListView(
       children: const <Widget>[
-        ListTile(
-          leading: Icon(Icons.map),
-          title: Text("dseds"),
-        ),
-        // TopServices(),
+        TopServices(),
       ],
     );
   }
