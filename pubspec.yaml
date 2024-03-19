@@ -76,7 +76,11 @@ flutter:
     - assets/icons/explore.svg
     - assets/icons/blog.svg
     - assets/icons/account.svg
+    - assets/icons/avatar.png
     - assets/backgrounds/background-item-1.png
+    - assets/backgrounds/background-item-2.png
+    - assets/backgrounds/background-item-3.png
+    - assets/icons/star.png
 
   #   - images/a_dot_ham.jpeg
 

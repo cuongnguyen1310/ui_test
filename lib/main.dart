@@ -22,7 +22,11 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           toolbarHeight: 113,
-          title: const Headers(),
+          // backgroundColor: Colors.yellow,
+          title: Container(
+            // color: Colors.orange,
+            child: const Headers(),
+          ),
         ),
         body: const BodyWidget(),
         bottomNavigationBar: const BottomWidget(),

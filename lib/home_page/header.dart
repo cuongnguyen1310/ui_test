@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Headers extends StatefulWidget {
   const Headers({super.key});
@@ -10,98 +12,100 @@ class Headers extends StatefulWidget {
 class _HeadersState extends State<Headers> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SizedBox(
-          height: 113,
-          width: 358,
-          // color: Colors.blue,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const SizedBox(
-                height: 44,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      // color: Colors.grey,
-                      width: 134,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SizedBox(
-                            width: 44,
-                            child: Image(
-                                image:
-                                    AssetImage('assets/icons/menu-burger.png')),
+    return Container(
+        // color: Colors.blue,
+        width: MediaQuery.of(context).size.width,
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              // color: Colors.purple,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    // color: Colors.grey,
+                    // width: 134,
+                    child: Row(
+                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(11, 0, 27, 0),
+                          child: Image(
+                            image: AssetImage('assets/icons/menu-burger.png'),
                           ),
-                          Image(
+                        ),
+                        Container(
+                          child: Image(
                             image: AssetImage('assets/icons/logo.png'),
                           ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      width: 102,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SizedBox(
-                            width: 44,
-                            child: Image(
-                              image:
-                                  AssetImage('assets/icons/notification.png'),
-                            ),
-                          ),
-                          SizedBox(
-                            width: 44,
-                            child: Image(
-                              image:
-                                  AssetImage('assets/icons/shopping-cart.png'),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              ListView.builder(
-                  shrinkWrap: true, itemBuilder: (context, index) {}),
-              SizedBox(
-                height: 51,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      width: 295,
-                      decoration: const BoxDecoration(),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          prefixIcon: const Icon(Icons.search),
-                          border: OutlineInputBorder(
-                            borderSide: const BorderSide(),
-                            borderRadius: BorderRadius.circular(14),
-                          ),
-                          hintText: "Search here",
                         ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    // color: Colors.amber,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          // color: Colors.green,
+                          padding: EdgeInsets.all(10),
+                          child: Image(
+                            image: AssetImage('assets/icons/notification.png'),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 14),
+                          // color: Colors.blue,
+                          padding: EdgeInsets.all(10),
+                          child: Image(
+                            image: AssetImage('assets/icons/shopping-cart.png'),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            // ListView.builder(
+            //     shrinkWrap: true, itemBuilder: (context, index) {}),
+            Container(
+              height: 51,
+              // color: Colors.white,
+              margin: EdgeInsets.only(top: 17),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 295,
+                    decoration: const BoxDecoration(),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        prefixIcon: const Icon(Icons.search),
+                        border: OutlineInputBorder(
+                          borderSide: const BorderSide(),
+                          borderRadius: BorderRadius.circular(14),
+                        ),
+                        hintText: "Search here",
                       ),
                     ),
-                    Container(
-                      width: 51,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black),
-                        borderRadius: BorderRadius.circular(14),
-                      ),
-                      child: const Image(
-                        image: AssetImage("assets/icons/sort.png"),
-                      ),
-                    )
-                  ],
-                ),
+                  ),
+                  Container(
+                    width: 51,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black),
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: const Image(
+                      image: AssetImage("assets/icons/sort.png"),
+                    ),
+                  )
+                ],
               ),
-            ],
-          )),
-    );
+            ),
+          ],
+        ));
   }
 }
