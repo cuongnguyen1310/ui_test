@@ -54,6 +54,24 @@ class BodyWidget extends StatelessWidget {
               ],
             ),
           ),
+          // ListView(
+          //   shrinkWrap: true,
+          //   padding: const EdgeInsets.all(20),
+          //   children: [
+          //     Container(
+          //       height: 50,
+          //       color: Colors.amber[600],
+          //       child: Stack(
+          //         children: [
+          //           Image.asset(
+          //             "assets/backgrounds/background-item-1.png",
+          //             scale: 2,
+          //           ),
+          //         ],
+          //       ),
+          //     ),
+          //   ],
+          // ),
           Container(
             // margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
             // color: Colors.purple,
@@ -108,43 +126,139 @@ class BodyWidget extends StatelessWidget {
             ),
           ),
           GridView.count(
+            childAspectRatio: 1 / 2,
+            shrinkWrap: true,
             primary: false,
             padding: const EdgeInsets.all(20),
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
+            crossAxisSpacing: 20,
+            mainAxisSpacing: 20,
             crossAxisCount: 2,
             children: <Widget>[
-              Container(
-                padding: const EdgeInsets.all(8),
-                color: Colors.teal[100],
-                child: const Text("He'd have you all unravel at the"),
-              ),
-              Container(
-                padding: const EdgeInsets.all(8),
-                color: Colors.teal[200],
-                child: const Text('Heed not the rabble'),
-              ),
-              Container(
-                padding: const EdgeInsets.all(8),
-                color: Colors.teal[300],
-                child: const Text('Sound of screams but the'),
-              ),
-              Container(
-                padding: const EdgeInsets.all(8),
-                color: Colors.teal[400],
-                child: const Text('Who scream'),
-              ),
-              Container(
-                padding: const EdgeInsets.all(8),
-                color: Colors.teal[500],
-                child: const Text('Revolution is coming...'),
-              ),
-              Container(
-                padding: const EdgeInsets.all(8),
-                color: Colors.teal[600],
-                child: const Text('Revolution, they...'),
-              ),
+              RecommendationItem(),
+              RecommendationItem(),
+              RecommendationItem(),
+              RecommendationItem(),
             ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class RecommendationItem extends StatelessWidget {
+  const RecommendationItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
+            children: [
+              Image.asset(
+                "assets/backgrounds/background-item-recommendation.png",
+                scale: 2,
+              ),
+              Positioned(
+                right: 0,
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(0, 10, 10, 0),
+                  padding: EdgeInsets.fromLTRB(2.5, 0, 2.5, 0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color(0xB3FFFFFF),
+                  ),
+                  child: Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(2.5),
+                        child: Image.asset(
+                          "assets/icons/star.png",
+                          scale: 2,
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(0, 0, 2.5, 0),
+                        // color: Colors.red,
+                        child: Text(
+                          "4.9",
+                          style: GoogleFonts.hind(
+                            textStyle: const TextStyle(
+                              color: Color(0xFF1D1F24),
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+          Container(
+            // color: Colors.pink,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Miss Zachary Will",
+                      style: GoogleFonts.hind(
+                        textStyle: const TextStyle(
+                          color: Color(0xFF1D1F24),
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "Beautician",
+                      style: GoogleFonts.hind(
+                        textStyle: const TextStyle(
+                          color: Color(0xFF827BEB),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(0, 2.5, 0, 0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Occaecati aut nam beatae quo non deserunt consequatur.",
+                        style: GoogleFonts.hind(
+                          textStyle: const TextStyle(
+                            color: Color(0xFF6B6B6B),
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(0, 2.5, 0, 0),
+                        padding: EdgeInsets.fromLTRB(24, 6, 25, 6),
+                        // color: Color(0xFF827BEB),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Color(0xFF827BEB),
+                        ),
+                        child: Text("Book Workshop"),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
           )
         ],
       ),

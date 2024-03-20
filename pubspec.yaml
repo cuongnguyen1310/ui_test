@@ -80,6 +80,7 @@ flutter:
     - assets/backgrounds/background-item-1.png
     - assets/backgrounds/background-item-2.png
     - assets/backgrounds/background-item-3.png
+    - assets/backgrounds/background-item-recommendation.png
     - assets/icons/star.png
 
   #   - images/a_dot_ham.jpeg

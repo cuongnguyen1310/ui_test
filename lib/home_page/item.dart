@@ -12,7 +12,7 @@ class ItemTopServiceWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-      // color: Colors.orange,
+      color: Colors.orange,
       width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
       child: Stack(
@@ -59,7 +59,6 @@ class ItemTopServiceWidget extends StatelessWidget {
                               color: Color(0xFF1D1F24),
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
-                              // Các thuộc tính khác của TextStyle
                             ),
                           ),
                         ),
@@ -70,7 +69,6 @@ class ItemTopServiceWidget extends StatelessWidget {
                               color: Color(0xFF827BEB),
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
-                              // Các thuộc tính khác của TextStyle
                             ),
                           ),
                         ),
@@ -81,7 +79,6 @@ class ItemTopServiceWidget extends StatelessWidget {
                               color: Color(0xFF6B6B6B),
                               fontSize: 10,
                               fontWeight: FontWeight.w500,
-                              // Các thuộc tính khác của TextStyle
                             ),
                           ),
                         ),
@@ -107,8 +104,6 @@ class ItemTopServiceWidget extends StatelessWidget {
                                         color: Color(0xFF1D1F24),
                                         fontSize: 12,
                                         fontWeight: FontWeight.w500,
-
-                                        // Các thuộc tính khác của TextStyle
                                       ),
                                     ),
                                   ),
