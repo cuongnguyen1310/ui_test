@@ -10,7 +10,7 @@ class BodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 20),
+      margin: const EdgeInsets.only(top: 20),
       // color: Colors.green,
       child: ListView(
         children: [
@@ -18,7 +18,7 @@ class BodyWidget extends StatelessWidget {
           const Sliders(),
           Container(
             // color: Colors.green,
-            margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+            margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
             height: 38,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,24 +54,6 @@ class BodyWidget extends StatelessWidget {
               ],
             ),
           ),
-          // ListView(
-          //   shrinkWrap: true,
-          //   padding: const EdgeInsets.all(20),
-          //   children: [
-          //     Container(
-          //       height: 50,
-          //       color: Colors.amber[600],
-          //       child: Stack(
-          //         children: [
-          //           Image.asset(
-          //             "assets/backgrounds/background-item-1.png",
-          //             scale: 2,
-          //           ),
-          //         ],
-          //       ),
-          //     ),
-          //   ],
-          // ),
           Container(
             // margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
             // color: Colors.purple,
@@ -89,7 +71,7 @@ class BodyWidget extends StatelessWidget {
           ),
           Container(
             // color: Colors.green,
-            margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+            margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
             height: 38,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -133,7 +115,7 @@ class BodyWidget extends StatelessWidget {
             crossAxisSpacing: 20,
             mainAxisSpacing: 20,
             crossAxisCount: 2,
-            children: <Widget>[
+            children: const <Widget>[
               RecommendationItem(),
               RecommendationItem(),
               RecommendationItem(),

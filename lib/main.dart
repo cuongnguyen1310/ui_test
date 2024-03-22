@@ -9,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,16 +16,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        useMaterial3: false,
       ),
       home: Scaffold(
         appBar: AppBar(
           toolbarHeight: 113,
-          // backgroundColor: Colors.yellow,
-          title: Container(
-            // color: Colors.orange,
-            child: const Headers(),
-          ),
+          elevation: 0,
+          backgroundColor: Colors.white,
+          title: const Headers(),
         ),
         body: const BodyWidget(),
         bottomNavigationBar: const BottomWidget(),

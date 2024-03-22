@@ -11,10 +11,10 @@ class ItemTopServiceWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-      color: Colors.orange,
+      margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+      // color: Colors.orange,
       width: MediaQuery.of(context).size.width,
-      padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+      padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
       child: Stack(
         children: [
           Image.asset(
@@ -41,14 +41,14 @@ class ItemTopServiceWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                     child: Image.asset(
                       'assets/icons/avatar.png',
                       scale: 2,
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(0, 5, 5, 5),
+                    padding: const EdgeInsets.fromLTRB(0, 5, 5, 5),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -88,7 +88,7 @@ class ItemTopServiceWidget extends StatelessWidget {
                               children: [
                                 Container(
                                   // color: Colors.yellow,
-                                  padding: EdgeInsets.all(2.5),
+                                  padding: const EdgeInsets.all(2.5),
                                   child: Image.asset(
                                     'assets/icons/star.png',
                                     scale: 2,
@@ -111,14 +111,13 @@ class ItemTopServiceWidget extends StatelessWidget {
                               ],
                             ),
                             Container(
-                              margin: EdgeInsets.fromLTRB(2.5, 2.5, 0, 0),
-                              padding: EdgeInsets.fromLTRB(24, 6, 25, 6),
-                              // color: Color(0xFF827BEB),
+                              margin: const EdgeInsets.fromLTRB(2.5, 2.5, 0, 0),
+                              padding: const EdgeInsets.fromLTRB(24, 6, 25, 6),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8),
-                                color: Color(0xFF827BEB),
+                                color: const Color(0xFF827BEB),
                               ),
-                              child: Text("Book Now"),
+                              child: const Text("Book Now"),
                             )
                           ],
                         )

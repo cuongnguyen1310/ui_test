@@ -12,69 +12,61 @@ class Headers extends StatefulWidget {
 class _HeadersState extends State<Headers> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         // color: Colors.blue,
         width: MediaQuery.of(context).size.width,
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              // color: Colors.purple,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    // color: Colors.grey,
-                    // width: 134,
-                    child: Row(
-                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.fromLTRB(11, 0, 27, 0),
-                          child: Image(
-                            image: AssetImage('assets/icons/menu-burger.png'),
-                          ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  // color: Colors.grey,
+                  // width: 134,
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.fromLTRB(11, 0, 27, 0),
+                        child: Image(
+                          image: AssetImage('assets/icons/menu-burger.png'),
                         ),
-                        Container(
-                          child: Image(
-                            image: AssetImage('assets/icons/logo.png'),
-                          ),
+                      ),
+                      Container(
+                        child: Image(
+                          image: AssetImage('assets/icons/logo.png'),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  Container(
-                    // color: Colors.amber,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          // color: Colors.green,
-                          padding: EdgeInsets.all(10),
-                          child: Image(
-                            image: AssetImage('assets/icons/notification.png'),
-                          ),
+                ),
+                Container(
+                  // color: Colors.amber,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        child: const Image(
+                          image: AssetImage('assets/icons/notification.png'),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left: 14),
-                          // color: Colors.blue,
-                          padding: EdgeInsets.all(10),
-                          child: Image(
-                            image: AssetImage('assets/icons/shopping-cart.png'),
-                          ),
-                        )
-                      ],
-                    ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(left: 14),
+                        padding: const EdgeInsets.all(10),
+                        child: const Image(
+                          image: AssetImage('assets/icons/shopping-cart.png'),
+                        ),
+                      )
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-            // ListView.builder(
-            //     shrinkWrap: true, itemBuilder: (context, index) {}),
             Container(
               height: 51,
-              // color: Colors.white,
-              margin: EdgeInsets.only(top: 17),
+              margin: const EdgeInsets.only(top: 17),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
